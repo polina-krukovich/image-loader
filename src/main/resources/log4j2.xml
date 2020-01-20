@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" name="AppLogConfig">
+    <Properties>
+        <Property name="LogFileName">logs/app.log</Property>
+        <Property name="Pattern">%d{DATE} [%t] %-5p %c{5} - %m%n</Property>
+    </Properties>
+    <Appenders>
+        <File name="FileAppender" fileName="${LogFileName}">
+            <PatternLayout pattern="${Pattern}"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="FileAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>
