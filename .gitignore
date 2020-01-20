@@ -2,5 +2,6 @@
 .idea
 target
 out
+*.json
 *.class
 logs

@@ -13,12 +13,8 @@ import org.apache.commons.fileupload.FileItemStream;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class ImageDao {
 
@@ -28,14 +24,16 @@ public class ImageDao {
 
     private static final Logger logger = LogManager.getLogger(ImageDao.class);
 
+    private static final String CONF_FILE_NAME = "image-loader-265208-c7e8a0654c61.json";
+
     private static Storage storage = null;
     static {
         try {
             storage = StorageOptions.newBuilder()
-                    .setCredentials(ServiceAccountCredentials.fromStream(new FileInputStream(
-                            "/home/polina/java/image-loader/image-loader-265208-c7e8a0654c61.json")))
+                    .setCredentials(ServiceAccountCredentials.fromStream(Objects.requireNonNull(
+                            ImageDao.class.getClassLoader().getResourceAsStream(CONF_FILE_NAME))))
                     .build().getService();
-        } catch (IOException e) {
+        } catch (IOException | NullPointerException e) {
             logger.error(e.getMessage());
         }
     }
