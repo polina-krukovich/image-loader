@@ -33,7 +33,6 @@ body, html {
     display: flex;
     flex-flow: row wrap;
     padding: 20px 0;
-    min-height: 100%;
 }
 .form__box {
     flex: 15%;
@@ -57,7 +56,7 @@ body, html {
     width: 100%;
     max-width: 300px;
     min-width: 150px;
-    font-size: 0.7em;
+    font-size: 1em;
     margin: 10px 0;
 }
 .form__img_preview {
@@ -81,8 +80,8 @@ body, html {
     margin: 10px;
 }
 .gallery__box__img {
-    max-width: 350px;
-    max-height: 350px;
+    max-width: 300px;
+    max-height: 300px;
     min-width: 150px;
     vertical-align: center;
     border-radius: 5px;
