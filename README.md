@@ -3,6 +3,9 @@
 > **Image Loader** is a Java Web application developed using App Engine Standard 
 > Environment and Cloud Storage.
 
+
+![Image](https://github.com/polina-krukovich/image-loader/blob/master/images/header.png)
+
 ## Functionality
 
 ### Upload :new:
@@ -23,6 +26,9 @@ User can create new images in Google Cloud Storage bucket:
     }
 ```
 
+![Image](https://github.com/polina-krukovich/image-loader/blob/master/images/upload_f.png)
+![Image](https://github.com/polina-krukovich/image-loader/blob/master/images/upload_s.png)
+
 ### Delete :x:
 You can delete images from bucket:
 ```java
@@ -30,6 +36,9 @@ You can delete images from bucket:
         storage.delete(blobId);
     }
 ```
+
+![Image](https://github.com/polina-krukovich/image-loader/blob/master/images/delete_f.png)
+![Image](https://github.com/polina-krukovich/image-loader/blob/master/images/delete_s.png)
 
 ### View :eyes:
 User can list all the images stored in a bucket:
@@ -49,4 +58,7 @@ User can list all the images stored in a bucket:
         return images;
     }
 ```
+
+
+![Image](https://github.com/polina-krukovich/image-loader/blob/master/images/list.png)
 
